@@ -93,67 +93,67 @@ let titleImage = (
 );
 
 //<i className="fas fa-fire" />
-if (
-  window.location.hostname.indexOf("localhost") >= 0 ||
-  window.location.hostname.indexOf("10.0.0.107") >= 0
-) {
-  XDAI_PROVIDER = "http://localhost:8545";
-  WEB3_PROVIDER = "http://localhost:8545";
-  CLAIM_RELAY = "http://localhost:18462";
-  if (true) {
-    ERC20NAME = false;
-    ERC20TOKEN = false;
-    ERC20IMAGE = false;
-  } else {
-    ERC20NAME = "BUFF";
-    ERC20VENDOR = "VendingMachine";
-    ERC20TOKEN = "ERC20Vendable";
-    ERC20IMAGE = bufficorn;
-    XDAI_PROVIDER = "http://localhost:8545";
-    WEB3_PROVIDER = "http://localhost:8545";
-    LOADERIMAGE = bufficorn;
-  }
-} else if (window.location.hostname.indexOf("s.xdai.io") >= 0) {
+// if (
+//   window.location.hostname.indexOf("localhost") >= 0 ||
+//   window.location.hostname.indexOf("10.0.0.107") >= 0
+// ) {
+//   XDAI_PROVIDER = "http://localhost:8545";
+//   WEB3_PROVIDER = "http://localhost:8545";
+//   CLAIM_RELAY = "http://localhost:18462";
+//   if (true) {
+//     ERC20NAME = false;
+//     ERC20TOKEN = false;
+//     ERC20IMAGE = false;
+//   } else {
+//     ERC20NAME = "BUFF";
+//     ERC20VENDOR = "VendingMachine";
+//     ERC20TOKEN = "ERC20Vendable";
+//     ERC20IMAGE = bufficorn;
+//     XDAI_PROVIDER = "http://localhost:8545";
+//     WEB3_PROVIDER = "http://localhost:8545";
+//     LOADERIMAGE = bufficorn;
+//   }
+// } else if (window.location.hostname.indexOf("s.xdai.io") >= 0) {
+//   WEB3_PROVIDER = POA_XDAI_NODE;
+//   CLAIM_RELAY = "https://x.xdai.io";
+//   ERC20TOKEN = false; //'Burner'
+// } else if (window.location.hostname.indexOf("wallet.galleass.io") >= 0) {
+//   //WEB3_PROVIDER = "https://rinkeby.infura.io/v3/e0ea6e73570246bbb3d4bd042c4b5dac";
+//   WEB3_PROVIDER = "http://localhost:8545";
+//   //CLAIM_RELAY = 'https://x.xdai.io'
+//   ERC20TOKEN = false; //'Burner'
+//   document.domain = "galleass.io";
+// } else if (window.location.hostname.indexOf("qreth") >= 0) {
+//   WEB3_PROVIDER =
+//     "https://mainnet.infura.io/v3/e0ea6e73570246bbb3d4bd042c4b5dac";
+//   CLAIM_RELAY = false;
+//   ERC20TOKEN = false;
+// } else if (window.location.hostname.indexOf("xdai") >= 0) {
   WEB3_PROVIDER = POA_XDAI_NODE;
   CLAIM_RELAY = "https://x.xdai.io";
-  ERC20TOKEN = false; //'Burner'
-} else if (window.location.hostname.indexOf("wallet.galleass.io") >= 0) {
-  //WEB3_PROVIDER = "https://rinkeby.infura.io/v3/e0ea6e73570246bbb3d4bd042c4b5dac";
-  WEB3_PROVIDER = "http://localhost:8545";
-  //CLAIM_RELAY = 'https://x.xdai.io'
-  ERC20TOKEN = false; //'Burner'
-  document.domain = "galleass.io";
-} else if (window.location.hostname.indexOf("qreth") >= 0) {
-  WEB3_PROVIDER =
-    "https://mainnet.infura.io/v3/e0ea6e73570246bbb3d4bd042c4b5dac";
-  CLAIM_RELAY = false;
   ERC20TOKEN = false;
-} else if (window.location.hostname.indexOf("xdai") >= 0) {
-  WEB3_PROVIDER = POA_XDAI_NODE;
-  CLAIM_RELAY = "https://x.xdai.io";
-  ERC20TOKEN = false;
-} else if (window.location.hostname.indexOf("buffidai") >= 0) {
-  WEB3_PROVIDER = POA_XDAI_NODE;
-  CLAIM_RELAY = "https://x.xdai.io";
-  ERC20NAME = "BUFF";
-  ERC20VENDOR = "VendingMachine";
-  ERC20TOKEN = "ERC20Vendable";
-  ERC20IMAGE = bufficorn;
-  LOADERIMAGE = bufficorn;
-} else if (window.location.hostname.indexOf("burnerwallet.io") >= 0) {
-  WEB3_PROVIDER = POA_XDAI_NODE;
-  CLAIM_RELAY = "https://x.xdai.io";
-  ERC20NAME = "BURN";
-  ERC20VENDOR = "BurnerVendor";
-  ERC20TOKEN = "Burner";
-  ERC20IMAGE = cypherpunk;
-  LOADERIMAGE = cypherpunk;
-} else if (window.location.hostname.indexOf("burnerwithrelays") >= 0) {
-  WEB3_PROVIDER = "https://dai.poa.network";
-  ERC20NAME = false;
-  ERC20TOKEN = false;
-  ERC20IMAGE = false;
-}
+// } else if (window.location.hostname.indexOf("buffidai") >= 0) {
+  // WEB3_PROVIDER = POA_XDAI_NODE;
+  // CLAIM_RELAY = "https://x.xdai.io";
+  // ERC20NAME = "BUFF";
+  // ERC20VENDOR = "VendingMachine";
+  // ERC20TOKEN = "ERC20Vendable";
+  // ERC20IMAGE = bufficorn;
+  // LOADERIMAGE = bufficorn;
+// } else if (window.location.hostname.indexOf("burnerwallet.io") >= 0) {
+//   WEB3_PROVIDER = POA_XDAI_NODE;
+//   CLAIM_RELAY = "https://x.xdai.io";
+//   ERC20NAME = "BURN";
+//   ERC20VENDOR = "BurnerVendor";
+//   ERC20TOKEN = "Burner";
+//   ERC20IMAGE = cypherpunk;
+//   LOADERIMAGE = cypherpunk;
+// } else if (window.location.hostname.indexOf("burnerwithrelays") >= 0) {
+//   WEB3_PROVIDER = "https://dai.poa.network";
+//   ERC20NAME = false;
+//   ERC20TOKEN = false;
+//   ERC20IMAGE = false;
+// }
 
 if (ERC20NAME == "BUFF") {
   mainStyle.backgroundImage = "linear-gradient(#540d48, #20012d)";
@@ -1217,6 +1217,7 @@ class App extends Component {
       send
     } = this.state;
 
+    console.log(this.state)
     let networkOverlay = "";
     if (web3 && !this.checkNetwork() && view != "exchange") {
       networkOverlay = (
