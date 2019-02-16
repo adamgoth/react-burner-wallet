@@ -16,12 +16,7 @@ export default class App extends Component {
 
     return (
       <Sidebar
-        sidebar={
-          <b>
-            ~ Burner Wallet ~<br />
-            <Wallet />
-          </b>
-        }
+        sidebar={<Wallet />}
         open={open}
         onSetOpen={toggleWallet}
         styles={{ sidebar: { background: "white" } }}

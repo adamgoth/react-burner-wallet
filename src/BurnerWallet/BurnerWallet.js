@@ -12,7 +12,6 @@ import axios from "axios";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import gasless from "tabookey-gasless";
-import "./App.scss";
 import Header from "./components/Header";
 import NavCard from "./components/NavCard";
 import SendByScan from "./components/SendByScan";
@@ -55,6 +54,9 @@ import cypherpunk from "./cypherpunk.png";
 import eth from "./ethereum.png";
 import dai from "./dai.jpg";
 import xdai from "./xdai.jpg";
+
+import './index.scss';
+import "./App.scss";
 
 let base64url = require("base64url");
 const EthCrypto = require("eth-crypto");
