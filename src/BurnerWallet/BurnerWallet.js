@@ -55,7 +55,7 @@ import eth from "./ethereum.png";
 import dai from "./dai.jpg";
 import xdai from "./xdai.jpg";
 
-import './index.scss';
+import "./index.scss";
 import "./App.scss";
 
 let base64url = require("base64url");
@@ -595,7 +595,7 @@ class App extends Component {
             );
           }
         } catch (e) {
-          console.log(e);
+          // console.log(e);
         }
       }
       if (this.state.xdaiweb3) {
