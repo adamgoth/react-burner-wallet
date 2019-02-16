@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Sidebar from "react-sidebar";
-import Wallet from "./BurnerWallet/BurnerWallet";
+import Wallet from "./WalletSrc/WalletSrc";
 import { ReactComponent as Logo } from "./burner-wallet.svg";
 
 export default class App extends Component {
