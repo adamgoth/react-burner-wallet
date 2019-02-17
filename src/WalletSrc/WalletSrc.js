@@ -118,7 +118,7 @@ let titleImage = (
 //   CLAIM_RELAY = "https://x.xdai.io";
 //   ERC20TOKEN = false; //'Burner'
 // } else if (window.location.hostname.indexOf("wallet.galleass.io") >= 0) {
-//   //WEB3_PROVIDER = "https://rinkeby.infura.io/v3/e0ea6e73570246bbb3d4bd042c4b5dac";
+  WEB3_PROVIDER = "https://rinkeby.infura.io/v3/e0ea6e73570246bbb3d4bd042c4b5dac";
 //   WEB3_PROVIDER = "http://localhost:8545";
 //   //CLAIM_RELAY = 'https://x.xdai.io'
 //   ERC20TOKEN = false; //'Burner'
@@ -129,8 +129,8 @@ let titleImage = (
 //   CLAIM_RELAY = false;
 //   ERC20TOKEN = false;
 // } else if (window.location.hostname.indexOf("xdai") >= 0) {
-  WEB3_PROVIDER = POA_XDAI_NODE;
-  CLAIM_RELAY = "https://x.xdai.io";
+  // WEB3_PROVIDER = POA_XDAI_NODE;
+  // CLAIM_RELAY = "https://x.xdai.io";
   ERC20TOKEN = false;
 // } else if (window.location.hostname.indexOf("buffidai") >= 0) {
   // WEB3_PROVIDER = POA_XDAI_NODE;
@@ -142,7 +142,7 @@ let titleImage = (
   // LOADERIMAGE = bufficorn;
 // } else if (window.location.hostname.indexOf("burnerwallet.io") >= 0) {
 //   WEB3_PROVIDER = POA_XDAI_NODE;
-//   CLAIM_RELAY = "https://x.xdai.io";
+//   CLAIM_RELAYT = "https://x.xdai.io";
 //   ERC20NAME = "BURN";
 //   ERC20VENDOR = "BurnerVendor";
 //   ERC20TOKEN = "Burner";
@@ -1217,36 +1217,35 @@ class App extends Component {
       send
     } = this.state;
 
-    console.log(this.state)
-    let networkOverlay = "";
-    if (web3 && !this.checkNetwork() && view != "exchange") {
-      networkOverlay = (
-        <div>
-          <input
-            style={{
-              zIndex: 13,
-              position: "absolute",
-              opacity: 0.95,
-              right: 48,
-              top: 192,
-              width: 194
-            }}
-            value="https://dai.poa.network"
-          />
-          <img
-            style={{
-              zIndex: 12,
-              position: "absolute",
-              opacity: 0.95,
-              right: 0,
-              top: 0,
-              maxHeight: 370
-            }}
-            src={customRPCHint}
-          />
-        </div>
-      );
-    }
+    let networkOverlay = "" ;
+    // if (web3 && !this.checkNetwork() && view != "exchange") {
+    //   networkOverlay = (
+    //     <div>
+    //       <input
+    //         style={{
+    //           zIndex: 13,
+    //           position: "absolute",
+    //           opacity: 0.95,
+    //           right: 48,
+    //           top: 192,
+    //           width: 194
+    //         }}
+    //         value="https://dai.poa.network"
+    //       />
+    //       <img
+    //         style={{
+    //           zIndex: 12,
+    //           position: "absolute",
+    //           opacity: 0.95,
+    //           right: 0,
+    //           top: 0,
+    //           maxHeight: 370
+    //         }}
+    //         src={customRPCHint}
+    //       />
+    //     </div>
+    //   );
+    // }
 
     let web3_setup = "";
     if (web3) {
@@ -1631,7 +1630,7 @@ class App extends Component {
 
                             <Balance
                               icon={xdai}
-                              selected={selected}
+                              selected={true}
                               text={"xDai"}
                               amount={this.state.xdaiBalance}
                               address={account}
@@ -1640,7 +1639,7 @@ class App extends Component {
                             <Ruler />
                             <Balance
                               icon={dai}
-                              selected={selected}
+                              selected={true}
                               text={"DAI"}
                               amount={this.state.daiBalance}
                               address={account}
@@ -1649,7 +1648,7 @@ class App extends Component {
                             <Ruler />
                             <Balance
                               icon={eth}
-                              selected={selected}
+                              selected={true}
                               text={"ETH"}
                               amount={
                                 parseFloat(this.state.ethBalance) *
