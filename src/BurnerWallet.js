@@ -9,13 +9,12 @@ export default class BurnerWallet extends Component {
     children: PropTypes.node,
     open: PropTypes.bool,
     toggleWallet: PropTypes.func,
+    mainColor: PropTypes.string,
+    altColor: PropTypes.string
   }
 
   render() {
-    const { children, open, toggleWallet } = this.props
-
-    const mainColor = "#FFD55F"
-    const altColor = "#FF49DB"
+    const { children, mainColor = "#FFD55F", altColor = "#FF49DB", open, toggleWallet } = this.props
 
     return (
       <Sidebar
