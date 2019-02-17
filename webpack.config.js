@@ -14,10 +14,6 @@ module.exports = {
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
-  resolve: {
-    modules: ['node_modules'],
-    extensions: ['.js', '.jsx', '.scss', '.css']
-  },
   node: { fs: 'empty' },
   module: {
     rules: [
@@ -32,9 +28,17 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpg|gif|svg)$/i,
-        loaders: ['file-loader']
+			  test: /\.svg/,
+			  use: {
+			    loader: 'svg-url-loader',
+			    options: {}
+			  }
+			},
+      {
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        loader: ['file-loader'],
       },
+
       {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']

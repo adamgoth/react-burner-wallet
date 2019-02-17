@@ -23,7 +23,6 @@ export default class BurnerWallet extends Component {
         open={open}
         className="Sidebar"
         onSetOpen={toggleWallet}
-        styles={{ sidebar: { background: 'white' } }}
         pullRight>
         <React.Fragment>
           <img
