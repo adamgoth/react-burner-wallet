@@ -220,56 +220,20 @@ class App extends Component {
     return {
       width: "100%",
       height: "100%",
-      backgroundImage: `linear-gradient(#292929, #191919)`,
-      backgroundColor: `${this.props.color}`,
-      // hotColor: `${this.props.color}`,
-      hotColor: `#29EB7F`,
+      backgroundImage: "linear-gradient(#292929, #191919)",
+      backgroundColor: "#292929",
       mainColorAlt: `${this.props.altColor}`,
       mainColor: `${this.props.color}`,
     }
   }
 
-  // if (ERC20NAME == "BUFF") {
-  //   this.mainStyle.backgroundImage = "linear-gradient(#540d48, #20012d)"
-  //   this.mainStyle.backgroundColor = "#20012d"
-  //   this.mainStyle.mainColor = "#b6299e"
-  //   this.mainStyle.mainColorAlt = "#de3ec3"
-  //   title = "BuffiDai.io"
-  //   titleImage = (
-  //     <img
-  //       src={bufficorn}
-  //       style={{
-  //         maxWidth: 50,
-  //         maxHeight: 50,
-  //         marginRight: 15,
-  //         marginTop: -10,
-  //       }}
-  //     />
-  //   )
-  // } else if (ERC20NAME == "BURN") {
-  //   this.mainStyle.backgroundImage = "linear-gradient(#4923d8, #6c0664)"
-  //   this.mainStyle.backgroundColor = "#6c0664"
-  //   this.mainStyle.mainColor = "#e72da3"
-  //   this.mainStyle.mainColorAlt = "#f948b8"
-  //   title = "Burner"
-  //   titleImage = (
-  //     <img
-  //       src={cypherpunk}
-  //       style={{
-  //         maxWidth: 50,
-  //         maxHeight: 50,
-  //         marginRight: 15,
-  //         marginTop: -10,
-  //       }}
-  //     />
-  //   )
-  // }
-
   get innerStyle() {
     return {
       maxWidth: 740,
+      minWidth: 250,
       margin: "0 auto",
       textAlign: "left",
+      width: "100%",
     }
   }
 
@@ -1148,7 +1112,7 @@ class App extends Component {
     let networkOverlay = ""
     if (web3 && !this.checkNetwork() && view != "exchange") {
       networkOverlay = (
-        <div>
+        <div className="networkOverlay">
           <input
             style={{
               zIndex: 13,
@@ -1180,6 +1144,7 @@ class App extends Component {
       web3_setup = (
         <div>
           <ContractLoader
+            className="ContractLoader"
             key="ContractLoader"
             config={{ DEBUG: true }}
             web3={web3}
@@ -1199,6 +1164,7 @@ class App extends Component {
           />
           <Transactions
             key="Transactions"
+            className="Transactions"
             config={{ DEBUG: false, hide: true }}
             account={account}
             gwei={gwei}

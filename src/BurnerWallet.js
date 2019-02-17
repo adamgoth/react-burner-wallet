@@ -14,10 +14,14 @@ export default class App extends Component {
   render() {
     const { children, open, toggleWallet } = this.props
 
+    const mainColor = "#FFD55F"
+    const altColor = "#FF49DB"
+
     return (
       <Sidebar
-        sidebar={<Wallet color={"#FFD55F"} altColor={"#FF49DB"} />}
+        sidebar={<Wallet color={mainColor} altColor={altColor} />}
         open={open}
+        className="Sidebar"
         onSetOpen={toggleWallet}
         styles={{ sidebar: { background: "white" } }}
         pullRight
