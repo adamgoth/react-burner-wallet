@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-burner-wallet/precache-manifest.3e3cafb82e7ddb18673f1e24b5ca76f9.js"
+  "/react-burner-wallet/precache-manifest.21160e8e7ed413836997a42116e0a368.js"
 );
 
 workbox.clientsClaim();
