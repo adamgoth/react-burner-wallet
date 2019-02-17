@@ -108,7 +108,7 @@ export default class History extends React.Component {
       smooth: "easeInOutCubic",
     })
   }
-  onKeyDown = (event: React.KeyboardEvent<HTMLDivElement>): void => {
+  onKeyDown = (event) => {
     // 'keypress' event misbehaves on mobile so we track 'Enter' key via 'keydown' event
     if (event.key === 'Enter' && (this.state.newChat||this.state.newChatAmount)) {
       event.preventDefault();

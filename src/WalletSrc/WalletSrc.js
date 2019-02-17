@@ -4,7 +4,6 @@ import {
   Dapparatus,
   Transactions,
   Gas,
-  Address,
   Events,
 } from "dapparatus"
 import Web3 from "web3"
