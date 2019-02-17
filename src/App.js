@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
-import BurnerWallet from './BurnerWallet';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react"
+import "@fortawesome/fontawesome-free/css/all.css"
+
+import BurnerWallet from "./BurnerWallet"
+import logo from "./logo.svg"
+import "./App.css"
 
 class App extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      walletOpen: false
+      walletOpen: false,
     }
   }
 
@@ -38,8 +40,8 @@ class App extends Component {
           </header>
         </div>
       </BurnerWallet>
-    );
+    )
   }
 }
 
-export default App;
+export default App
